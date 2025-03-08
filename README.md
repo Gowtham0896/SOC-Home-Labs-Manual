@@ -94,7 +94,7 @@ Follow these clear step-by-step instructions to set up your SOC Home Lab environ
 - **Download VMware Workstation Pro:** [Official Link](https://www.vmware.com/products/workstation-pro.html)
 - Install VMware Workstation Pro on your host machine (Windows/Mac Machine).
 
-### **Step 2: Configure Virtual Networking**
+### **Step 1.1: Configure Virtual Networking**
 - Open VMware Workstation.
 - Go to **Edit → Virtual Network Editor**.
 - Create a new network in **Host-only mode** or **NAT mode**.
@@ -118,9 +118,17 @@ Follow these clear step-by-step instructions to set up your SOC Home Lab environ
 - **Download Ubuntu Server ISO:** [Ubuntu 22.04 LTS](https://ubuntu.com/download/server)
 - Install Ubuntu Server in VMware [Refer Link In Prerequisites Section]
 
+#### **4. Install Metasploit**
+- **Download Metasploitable Machine Here:** [Metasploit](https://www.rapid7.com/products/metasploit/metasploitable/)
+- Install Metasploit in VMWare: [Refer Link](https://www.youtube.com/watch?v=o3Lcha65fsM)
+
+#### **5. Install Kali Linux**
+- - **Download Kali Linux Machine Here:** [Kali Linux](https://www.kali.org/get-kali/#kali-platforms)
+- Install Metasploit in VMWare: [Refer Link](https://www.youtube.com/watch?v=A1Bm9KmPQ0o)
+
 ---
 
-### **Step 3: Install and Configure SIEM Tool**
+#### **Step 3: Install and Configure SIEM Tool**
 
 #### **Splunk (Recommended)**
 - [Splunk Enterprise Free Version](https://www.splunk.com/en_us/download/splunk-enterprise.html)
@@ -133,7 +141,7 @@ Follow these clear step-by-step instructions to set up your SOC Home Lab environ
 
 ---
 
-### **Step 3: Endpoint Logging Configuration**
+#### **Step 4: Endpoint Logging Configuration**
 
 #### **Windows VM Setup**
 - **Sysmon Installation:** [Official Sysmon Download](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
@@ -144,33 +152,33 @@ Follow these clear step-by-step instructions to set up your SOC Home Lab environ
 
 ---
 
-### **Step 3: Configure Log Forwarding to SIEM**
+#### **Step 5: Configure Log Forwarding to SIEM**
 - Configure **Winlogbeat** (Windows) and **Filebeat** (Linux) to forward logs to your SIEM (Splunk/Elastic).
 - Validate log ingestion in SIEM dashboards.
 
 ---
 
-### **Step 3: Dashboards & Alerts Configuration**
+#### **Step 6: Dashboards & Alerts Configuration**
 - Create custom dashboards in your SIEM to visualize key security events:
   - Logon Events, Process Creations, Network Traffic, Alerts
 - Set up basic alert rules for suspicious behaviors, e.g., multiple failed logins.
 
 ---
 
-### **Step 4: Simulate Security Incidents**
+#### **Step 7: Simulate Security Incidents**
 - **Atomic Red Team Installation (on Windows):** [GitHub Repo](https://github.com/redcanaryco/atomic-red-team)
 - Utilize Kali Linux and Metasploit (already installed) for additional attack simulations.
 
 ---
 
-### **Step 4: Practice Incident Detection & Response**
+#### **Step 8: Practice Incident Detection & Response**
 - Simulate various security scenarios using Atomic Red Team.
 - Investigate triggered alerts within your SIEM.
 - Refine detection rules based on findings.
 
 ---
 
-### **Step 5: Documentation & Improvement**
+#### **Step 9: Documentation & Improvement**
 - Continuously document your lab setup, SIEM rules, detection methods, and incident-response actions.
 - Regularly update and refine your lab configurations based on your learning outcomes.
 
