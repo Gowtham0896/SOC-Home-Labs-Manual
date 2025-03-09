@@ -7,8 +7,7 @@
 2. [Prerequisites](#prerequisites)
 3. [Network Topology](#network-topology)
 4. [Installation Guide](#installation-guide)
-5. [Screenshots](#screenshots)
-6. [Conclusion](#conclusion)
+5. [Conclusion](#conclusion)
 
 
 
@@ -134,6 +133,24 @@ Follow these clear step-by-step instructions to set up your SOC Home Lab environ
 - [Splunk Enterprise Free Version](https://www.splunk.com/en_us/download/splunk-enterprise.html)
 - Splunk Installation Guide (Ubuntu) [Refer Link In Prerequisites Section]
 
+- Steps to Install splunk on Ubuntu:
+- Download Splunk Enterprise
+- wget -O splunk-9.4.1-e3bdab203ac8-linux-amd64.deb "https://download.splunk.com/products/splunk/releases/9.4.1/linux/splunk-9.4.1-e3bdab203ac8-linux-amd64.deb"
+- OR you can find the Splunk latest version here: [Click Here](https://www.splunk.com/en_us/download/splunk-enterprise.html)
+- Install using dpkg
+- sudo dpkg -i splunk-9.4.1-e3bdab203ac8-linux-amd64.deb
+
+- Start Splunk and accept license
+- sudo /opt/splunk/bin/splunk start --accept-license
+
+- Enable Splunk to start at boot
+- sudo /opt/splunk/bin/splunk enable boot-start
+
+# How to access Splunk once installed:
+- Enter this command in Ubuntu terminal: "**ip addr show**", You will get an ip address eg: 192.168.1.1
+- Now go to any GUI Virtual Machine like Kali Linux, Windows 10 anything, Open browser and enter "http://ip-address":8000  eg: http://192.168.1.1:8000
+- User name : "admin", Password need to be set while setting up the splunk.
+
 **Or**
 
 #### **Elastic Stack (Elasticsearch, Logstash, Kibana)**
@@ -144,7 +161,7 @@ Follow these clear step-by-step instructions to set up your SOC Home Lab environ
 #### **Step 4: Endpoint Logging Configuration**
 
 #### **Windows VM Setup**
-- **Sysmon Installation:** [Official Sysmon Download](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- **Sysmon Installation:** (Windows 10VM) [Official Sysmon Download](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
 - **Winlogbeat Installation:** [Official Guide](https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation.html)
 
 #### **Ubuntu Linux VM (Log Collection)**
@@ -199,7 +216,7 @@ Follow these clear step-by-step instructions to set up your SOC Home Lab environ
 
 This guide will comprehensively prepare your lab to practice and master SIEM and SOC operational concepts.
 
-## Screenshots
+
 
 ## Conclusion
 This project demonstrates how to:
